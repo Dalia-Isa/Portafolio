@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- lang quiere decir que el lenguaje esta en ingles-->
+<head>
+    <meta charset="UTF-8"> <!-- UTF-8 quiere decir que son los caracteres mas utilizados en el mundo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--viewport es la visualizacion de la panralla
+    content = Es que la pagina se adapte a la pared que se usa, como en el cel, o compu
+    initial-scale = 1.0 es para que se inicialice sin  ningun zoom, si se coloca 2, se tendra un poco de zoom en la pantalla -->
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body><!--Es el fondo de la pantalla-->
+    
+    <header class="header">
+        <nav class="header__menu">
+            <a class="header__menu__link" href="index.html">Home</a>
+            <a class="header__menu__link" href="about.html">Sobre mi</a>
+        </nav>
+    </header><!--Comprende la información del documento que será interpretada por el navegador (metadatos). 
+    Por ejemplo, título del documento, enlaces a hojas de estilo, etc.-->
+    
+    <main class="presentacion">
+        <section class="presentacion__contenido"><!--Se utiliza para definir una sección o parte independiente dentro de una página web. -->
+            <h1 class="presentacion__contenido__titulo">
+                Eleve tu negocio digital a otro nivel <strong class="titulo-destacar">con un Front-end de calidad!</strong> 
+            </h1><!--Titulo-->
+            <!--La etiqueta <strong> en HTML se utiliza para indicar que un texto es importante o destacado.
+                Es como si le dijeras al navegador: "Hey, este texto es importante, ¡ponlo en negrita!"-->
+            <p class="presentacion__contenido__texto">
+                <strong>¡Hola! Soy Ana García</strong>, desarrolladora Front-end con especialización en React, 
+                HTML y CSS. Ayudo a pequeños negocios y diseñadores a llevar a cabo buenas ideas. 
+                ¿Hablamos?
+            </p> <!--La etiqueta <p> en HTML se utiliza para crear un párrafo de texto. 
+                Es como un contenedor para tus palabras, que te permite organizar el 
+                contenido de tu página web de forma más legible. -->
+
+            <div class="presentacion__enlaces"> <!--div es para agrupar elementos y aplicar estilos de forma conjunta  -->
+                <h2 class="presentacion__enlaces__subtitulo">Accede a mis redes:</h2><!--Titulo 2-->
+                <a class="presentacion__enlaces__link" href="https://www.instagram.com">
+                    <img src="./assets/instagram.png">
+                    Instagram</a><!--La etiqueta <a> en HTML se utiliza para crear un enlace o hipervínculo. 
+                    Es como un puente que te lleva de una página web a otra, o a otra parte de 
+                    la misma página.-->
+                <a class="presentacion__enlaces__link" href="https://github.com">
+                    <img src="./assets/github.png">
+                    GitHub</a>
+                <a class="presentacion__enlaces__link" href="https://linkedin.com">
+                    <img src="./assets/linkedin.png">
+                    Linkedin</a>
+            </div>
+
+        </section>
+            <img class="presentacion__imagen" src="./assets/Imagem.png" alt="Imagen de Ana Garcia trabajando"> <!-- Para mandar a llamar a la imagen-->
+                <!-- alt es un atributo utilizado en la etiqueta <img> para proporcionar un texto alternativo que se muestra si 
+                la imagen no puede cargarse.-->
+    </main>
+    <footer class="footer"><!--Definir el pie de página de un documento HTML-->
+        <p>
+           Desarrollado po Dalia 
+        </p>
+    </footer>
+</body>
+</html>

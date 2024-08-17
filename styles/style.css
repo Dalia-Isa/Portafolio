@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap'); /*Se impirta el estilo de fuente*/
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root { /*Optimizacion de las variables*/
+    --color-primario: #000000;
+    --color-secundario: #f6f6f6;
+    --color-terciario: #22D4FD;
+    --color-hover-uno: #272727;
+    --color-hover-dos: #327096; 
+
+
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona-one: "Krona One", sans-serif;
+
+}
+
+* { /* El * significa que se hara un cambio universal */
+    padding: 0px; /*Es el relleno*/
+    margin: 0px; /*Es el margen*/
+
+}
+
+body {
+    background-color: var(--color-primario); /*Color del fondo de la pantalla web*/
+    color: var(--color-secundario); /*Color de las letras*/
+    /*height: 100vh; /*Va a cubrir 100 la altura de la pagina web*/
+    box-sizing: border-box; /*e permite controlar el tamaño 
+    total de un elemento, sin importar el padding o el borde que le apliques.*/
+}
+
+/* strong {
+    color: #22D4FD; /*Para cambiar el color de la parte del titulo*/
+/*} */
+
+.header {
+    padding: 2% 0% 0% 15%; /*top right bottom left*/
+}
+
+.header__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.header__menu__link {
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem; /*16px = 1 REM*/
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+.presentacion {
+    /*margin: 5% 15%; /*Margen al rededor del elemento*/
+    padding: 3% 15%;
+    display: flex; /*Contenedor flexible*/
+    align-items: center; /* permite controlar la alineación de los elementos dentro del contenedor en el eje vertical.
+    center, es para que se ubiquen en el centro*/  
+    justify-content: space-between; /*Permite controlar cómo se distribuyen los elementos dentro de un contenedor Flex
+    space-between lo mas separados posibles*/
+    gap: 82px;
+}
+
+.presentacion__contenido {
+    width: 50%; /*Ancho de un elemento*/
+    display: flex;
+    flex-direction: column; /*Para cambiar la posicion ya sea vertical u horizontal*/
+    gap: 40px; /*nos permite crear espacio entre los elementos de un contenedor que 
+    utiliza el modelo de diseño flexbox. */
+}
+
+.presentacion__contenido__titulo {
+    font-size: 2.25rem;/*Tamaño de la fuente*/
+    font-family: var(--fuente-krona-one); /*Nombre de la fuente*/
+}
+
+.titulo-destacar { /*Para mandar a llamar una clase se utiliza el => . <=*/
+    color: var(--color-terciario); /*Para cambiar el color de la parte del titulo*/
+}
+
+.presentacion__contenido__texto {
+    font-size: 1.5rem;
+    font-family: var(--fuente-montserrat);
+}
+
+.presentacion__enlaces {
+    display: flex; /*Contenedor flexible*/
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center; /* permite controlar la alineación de los elementos dentro del contenedor en el eje vertical.
+    center, es para que se ubiquen en el centro*/
+}
+
+.presentacion__enlaces__subtitulo {
+    font-family: var(--fuente-krona-one);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.presentacion__enlaces__link {
+   width: 50%; /*Ancho del elemento*/
+   /*background-color: #22D4FD;*/
+   text-align: center; /*Alineacion del tecto dentro de un elemento*/
+   padding: 21.5px 0; /*x x, el primero es vertical y el segundo horizontal*/
+   border-radius: 8px; /*Redondeamiento*/
+   font-family: var(--fuente-montserrat);
+   font-size: 1.5rem;
+   font-weight: 600; /*Definir el grosor del texto*/
+   text-decoration: none; /*Decoracion del texto, none para "nada"*/
+   color: var(--color-secundario); /*Color del texto*/
+   border: 2px solid var(--color-terciario); /*x x x, el primero es el tamaño del borde
+   el segundo es la textura del borde y el tercero es el color*/
+   display: flex; 
+   justify-content: center;
+   gap: 18px;
+}
+
+.presentacion__enlaces__link:hover {
+    background-color: var(--color-hover-uno); /*para crear efectos interactivos en nuestras páginas web.*/
+    border: 2px solid var(--color-hover-dos);
+    cursor: pointer; /*Para cambiar el estilo del cursor a una mano con el dedo indice levantado*/ 
+}
+
+.presentacion__imagen {
+    width: 50%;
+}
+
+.footer {
+    background-color: var(--color-terciario);
+    padding: 24px;
+    color: var(--color-primario);
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+@media (max-width: 1200px) {
+    /* Para ajustar el diseño para pantallas de alta resolución */
+    
+    .header {
+        padding: 10%;
+    }
+
+    .header__menu {
+        justify-content: center;
+    }
+
+    .presentacion {
+       flex-direction: column-reverse; /*Reverso*/
+       padding: 8%;
+    }
+
+    .presentacion__contenido {
+        width: auto; /*Que sirve para daptarse a las secciones 
+        -auto- va adaptarse al elemento padre */
+    }
+}
